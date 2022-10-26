@@ -11,7 +11,13 @@ $$
 Q(p) = \max_p min[d(p), s(p)]
 $$
 
-limit order book LOB
-
+1. limit order book LOB
+2. liquidity provider
+3. liquidity taker
+4. price impact
+5. bid-ask spread
+6. price impact
+7. mid-price
+8. 
 
 
