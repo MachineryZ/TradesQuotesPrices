@@ -85,5 +85,16 @@ Price Change in an LOB. In an LOB, the rules that govern matching dictate how pr
     </tr>
 </table>
 
+Priority Rules
+LOBs also employ a priority system for limit orders within each individual price level:
+1. Most common rule currently is price-time priority:
+    1. For buy(respectively, sell) limit orders, priority is given to the limit orders with the highest(respectively, lowest) price, and ties are broken by selecting the limit order with the earliest submission time t
+2. Another priority mechanism, commonly used in short-rate futures markets, is pro-rata priority
+    1. Under this mechanism, when a tie occurs at agiven price, each relevant limit order receives a share of the matching equal to its fraction of the available volume at that price
 
+Order Types:
+1. Stop Orders
+2. Iceberg Orders
+3. Immediate-orcancel orders
+4. Market-on-close orders:
 
