@@ -22,4 +22,68 @@ Most studies of LOBs perform this aggregation in same-side quate-relative coordi
 1. $d(p_x, t) = b(t) - p_x$ if x is a buy limit order
 2. $d(p_x, t) = p_x - a(t)$ if x is a sell limit order
 
+on contrary, opposite-site quote relative coordinates
+
+1. $d(p_x, t) = a(t) - p_x$ if x is a buy limit order
+2. $d(p_x, t) = p_x - b(t)$ if x is a sell limit order
+
+
+Volume Profile
+1. Buy Side Volume at price p and time t $V_+(p, t) = \sigma_{x\in B(t)|p_x=p} v_x$
+
+
+Price Change in an LOB. In an LOB, the rules that govern matching dictate how prices evolve through time. Consider a buy(or sell) order x that arrives at time t
+1. if $p_x \leq b(t)$ (respectively, $p_x \geq a(t)$), then x is a limit order, it does not cause b(t) or a(t) to change
+2. if $b(t) < p_x < a(t)$ then x is also a limit order
+
+1. bid4: 1.47, 3
+2. bid3: 1.48, 3
+3. bid2: 1.48, 1
+4. bid1: 1.50, 2
+5. ask1: 1.53, -2
+6. ask2: 1.54, -3
+7. ask3: 1.55, -1
+<table>
+    <tr>
+        <td> Arriving Order </td>
+        <td> Values before arrival </td>
+        <td> Values after arrival </td>
+    </tr>
+    <tr>
+        <td> (+1, 1.48, 3, t)</td>
+        <td> (b=1.5, a=1.53, m=1.515, s=0.03)</td>
+        <td> (b=1.5, a=1.53, m=1.515, s=0.03 )</td>
+    </tr>
+        <tr>
+        <td> (+1, 1.51, 3, t)</td>
+        <td> (b=1.5, a=1.53, m=1.515, s=0.03)</td>
+        <td> (b=1.51, a=1.53, m=1.52, s=0.02 )</td>
+    </tr>    <tr>
+        <td> (+1, 1.55, 3, t)</td>
+        <td> (b=1.5, a=1.53, m=1.515, s=0.03)</td>
+        <td> (b=1.50, a=1.54, m=1.52, s=0.04 )</td>
+    </tr>    <tr>
+        <td> (+1, 1.55, 3, t)</td>
+        <td> (b=1.5, a=1.53, m=1.515, s=0.03)</td>
+        <td> (b=1.50, a=1.52, m=1.525, s=0.05 )</td>
+    </tr>    <tr>
+        <td> (-1, 1.54, 4, t)</td>
+        <td> (b=1.5, a=1.53, m=1.515, s=0.03)</td>
+        <td> (b=1.50, a=1.53, m=1.515, s=0.03 )</td>
+    </tr>    <tr>
+        <td> (+1, 1.48, 3, t)</td>
+        <td> (b=1.5, a=1.53, m=1.515, s=0.03)</td>
+        <td> (b=1.50, a=1.52, m=1.51, s=0.02 )</td>
+    </tr>    <tr>
+        <td> (+1, 1.48, 3, t)</td>
+        <td> (b=1.5, a=1.53, m=1.515, s=0.03)</td>
+        <td> (b=1.48, a=1.53, m=1.505, s=0.05 )</td>
+    </tr>    <tr>
+        <td> (+1, 1.48, 3, t)</td>
+        <td> (b=1.5, a=1.53, m=1.515, s=0.03)</td>
+        <td> (b=1.49, a=1.50, m=1.495, s=0.01 )</td>
+    </tr>
+</table>
+
+
 
