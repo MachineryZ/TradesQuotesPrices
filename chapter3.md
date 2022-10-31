@@ -94,7 +94,20 @@ LOBs also employ a priority system for limit orders within each individual price
 
 Order Types:
 1. Stop Orders
+    1. 就是，达到某一价格时，立刻下单的 order 形式
 2. Iceberg Orders
-3. Immediate-orcancel orders
+    1. 隐藏大 volume 订单的方式
+    2. only a fraction of the order size, called peak volume
+    3. hidden part has lower time priority; regular limit orders ath the same price that are submitted later will be executed first
+3. Immediate-or-cancel orders
+    1. 下单之后，不被 executed 之前，不会在 lob 上有痕迹
 4. Market-on-close orders:
+
+Opening and Closing Auctions
+1. 也就是开盘的集合竞价和收盘的集合竞价的过程
+2. For example, the LSE’s flagship order book SETS has three distinct trading phases in each trading day
+    1. Opening auction between 07:50 ~ 08:00
+    2. Continuous trading period between 08:00 ~ 16:30
+    3. Closing auction between 16:30 ~ 16:35
+
 
